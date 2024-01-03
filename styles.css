@@ -1,0 +1,740 @@
+@font-face {
+    font-family: Pixeloid;
+    src: 
+    url(font/PixeloidSans-mLxMm.ttf),
+    url(font/PixeloidSansBold-PKnYd.ttf);
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+section {
+    width: inherit;
+    height: inherit;
+    margin: inherit;
+    padding: inherit;
+    overflow: hidden;
+}
+
+img {
+    max-width: inherit;
+    max-height: inherit;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+a {
+    height: inherit;
+    width: inherit;
+}
+
+p {
+    font-family: Pixeloid, sans-serif;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+/*Patternes*/
+.full {
+    display: grid;
+    grid-template-areas: 
+    'top1 top1 arrow1 top2 top2' 
+    'arrow2 cont cont cont arrow3'
+    'bottom1 bottom1 arrow4 bottom2 bottom2';
+    grid-template-columns: 1fr 10fr 1fr 10fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+.top {
+    display: grid;
+    grid-template-areas: 
+    'top1 arrow1 top2'
+    'cont cont cont' 
+    'cont cont cont';
+    grid-template-columns: 10fr 1fr 10fr;
+    grid-template-rows: 1fr 10fr;
+}
+
+.left {
+    display: grid;
+    grid-template-areas: 
+    'cont cont cont top2' 
+    'cont cont cont arrow3'
+    'cont cont cont bottom2';
+    grid-template-columns: 10fr 10fr 10fr 1fr;
+    grid-template-rows: 10fr 1fr 10fr;
+}
+
+.right {
+    display: grid;
+    grid-template-areas: 
+    'top1 cont cont cont' 
+    'arrow2 cont cont cont'
+    'bottom1 cont cont cont';
+    grid-template-columns: 1fr 10fr 10fr 10fr;
+    grid-template-rows: 10fr 1fr 10fr;
+}
+
+.bottom {
+    display: grid;
+    grid-template-areas: 
+    'cont cont cont' 
+    'cont cont cont'
+    'bottom1 arrow4 bottom2';
+    grid-template-columns: 10fr 1fr 10fr;
+    grid-template-rows: 10fr 1fr;
+}
+
+/*Box*/
+.box1 {
+    grid-area: top1;
+}
+
+.box2 {
+    grid-area: top2;
+}
+
+.box3 {
+    grid-area: bottom1;
+}
+
+.box4 {
+    grid-area: bottom2;
+}
+
+.principale {
+    position: relative;
+    grid-area: cont;
+}
+
+.up_arrow {
+    grid-area: arrow1;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    z-index: 3;
+}
+
+.left_arrow {
+    grid-area: arrow2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 3;
+}
+
+.right_arrow {
+    grid-area: arrow3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 3;
+}
+
+.down_arrow {
+    grid-area: arrow4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: last baseline;
+    z-index: 3;
+}
+
+/*Pages*/
+#welcome {
+    background: linear-gradient(0deg, 
+    #a6386b 50%,
+    #590f4d 80%, 
+    #260220 95%);
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#main {
+    background-color: #78234b;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#perso {
+    background-color: antiquewhite;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#portfolio {
+    background-color: #009595;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#passion {
+    background-color: #b88dff;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/*-----Flèche et animation hover en SCSS------------------------------------------------------------------------------------*/
+.page_arrows {
+    width: 75px;
+    height: 65px;
+    
+    &:hover {
+      
+        polygon {
+            fill: #2267F2;
+            transition: all .2s ease-out;
+  
+            &.arrow-bottom {
+                transform: translateY(-18px);
+            }
+  
+            &.arrow-top {
+                transform: translateY(18px);
+            }
+        
+        }
+    
+    }
+    
+}
+  
+polygon {
+    fill: #c8d6f3;
+    transition: all .2s ease-out;
+      
+    &.arrow-middle {
+        opacity: 0.75;
+    }
+  
+    &.arrow-top {
+        opacity: 0.5
+    }
+       
+}
+
+/*Direction des flèches*/
+.dir_left {
+    transform: rotate(90deg);
+}
+
+.dir_right {
+    transform: rotate(-90deg);
+}
+
+.dir_top {
+    transform: rotate(180deg);
+}
+
+.dir_bottom {
+    transform: rotate(0deg);
+}
+
+/*Taille des flèches*/
+.arrow_container {
+    transform-origin: center;
+    transform: scale(1);
+    /*Faire varier width et height pour modifier l'épaisseur des marges*/
+}
+
+/*Text Box*/
+.text_box {
+    position: absolute;
+    color: #FFF;
+    font-size: 1.5em;
+    border-radius: 5%;
+    z-index: 3;
+    display: none;
+}
+
+.text {
+    font-family: Pixeloid, sans-serif;
+    text-align: center;
+    width: 180px;
+}
+
+.pic {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 40px solid #2267F2;
+}
+
+.tb_up {
+    bottom: 160%;
+    left: -66%;
+}
+
+.tb_left {
+    bottom: 10%;
+    left: -290%;
+}
+
+.tb_right {
+    bottom: 10%;
+    left: 160%;
+
+}
+
+.tb_down {
+    bottom: -95%;
+    left: -66%;
+}
+
+.t_up {
+    background: linear-gradient(0deg, 
+    #2267F2 25%, 
+    #B527F2 75%);
+}
+
+.t_left {
+    background: linear-gradient(270deg, 
+    #2267F2 25%, 
+    #B527F2 75%);
+}
+
+.t_right {
+    background: linear-gradient(90deg, 
+    #2267F2 25%, 
+    #B527F2 75%);
+}
+
+.t_down {
+    background: linear-gradient(180deg, 
+    #2267F2 25%, 
+    #B527F2 75%);
+}
+
+.p_up {
+    top: 90%;
+    left: 37%;
+    transform: rotate(0.75turn);
+}
+
+.p_left {
+    top: 20%;
+    left: 100%;
+    transform: rotate(0.5turn);
+}
+
+.p_right {
+    top: 20%;
+    left: -20%;
+    transform: rotate(0turn);
+}
+
+.p_down {
+    top: -100%;
+    left: 37%;
+    transform: rotate(0.25turn);
+}
+
+svg:hover {
+    cursor: pointer;
+
+    &:hover {
+
+        polygon {
+            fill: #2267F2;
+        }
+    }
+
+    &:active {
+        
+        polygon {
+            fill: #B527F2;
+        }
+    }
+}
+
+svg:hover + .text_box {
+    display: block;
+    animation: boxappear 1s forwards;
+}
+
+@keyframes boxappear {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*-----Page d'accueil---------------------------------------------------------------------------------------------------*/
+.title {
+    position: relative;
+    top: 5%;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    opacity: 0;
+
+    animation-name: bright;
+    animation-duration: 0s;
+    animation-delay: 8.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+h1 {
+    font-family: Pixeloid, sans-serif;
+    color: #F21D81;
+    text-align: center;
+    line-height: 20vh; /*Centré verticalement*/
+    font-size: 4em;
+    margin: inherit;
+    padding: inherit;
+}
+
+.sun {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(0deg, 
+    rgba(242,238,172,1) 15%, 
+    rgba(254,250,101,1) 50%, 
+    rgba(252,255,0,1) 75%, 
+    rgba(242,190,34,1) 95%);
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    z-index: 0;
+    overflow: hidden;
+    filter: drop-shadow(0 0 2rem yellow);
+
+    animation-name: sun_rising;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.separator {
+    position: relative;
+    width: 100vw;
+    height: 0;
+    margin: 20px -1%;
+    border: 3px solid rgb(169, 101, 133);
+}
+
+.first_sep {
+    top: 20%;
+}
+
+.sep_list {
+    top: 30%;
+}
+
+.horizon {
+    position: absolute;
+    top: 66%;
+    left: 40%;
+    width: 20vw;
+    height: 0;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 2;
+
+    animation-name: bright;
+    animation-duration: 1s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.ground {
+    position: inherit;
+    width: 100vw;
+    height: 40vh;
+    margin: 40vh auto 0;
+    border-top: 5px solid rgb(62, 7, 53);
+    box-shadow: inset 0em 0.5em 10px rgb(197, 103, 181);
+    z-index: 1;
+    overflow: hidden;
+    filter: brightness(0.2);
+
+    animation-name: day_rising;
+    animation-duration: 6s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes sun_rising {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: 25%;
+    }
+}
+
+@keyframes bright {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes day_rising {
+    from {
+        filter: brightness(0.2);
+    }
+
+    to {
+        filter: brightness(1);
+    }
+}
+
+/*Page Principale*/
+.grid1 {
+    display: grid;
+    grid-template-areas: 
+    'div1 div1 div2'
+    'div3 div4 div4';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.presentation1 {
+    background-color: #fc97c6;
+    padding: 10px;
+    grid-area: div1;
+}
+
+.p1 {
+    color: #FFF;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.presentation2 {
+    background-color:#590f4d;
+    grid-area: div2;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iut {
+    width: 80px;
+    height: 80px;
+}
+
+.univ {
+    width: 100px;
+    height: 80px;
+}
+
+.linkedin, .mail {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#mail {
+    position: absolute;
+    visibility: hidden;
+}
+
+.presentation3 {
+    background-color: #3e0735;
+    grid-area: div3;
+}
+
+.presentation4 {
+    background-color: #fc97c6;
+    padding: 10px;
+    grid-area: div4;
+}
+
+.strong {
+    font-size: 1.3em;
+    color: #3e0735;
+}
+
+/*Page Parcours, Portfolio, Passion*/
+.panel {
+    background-color: #3e0835;
+    width: 40%;
+    margin: 15% auto;
+    padding: 10px;    
+}
+
+.panel > p {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+/*-----Media Querries----------------------------------------------------------------------------------------------------------*/
+
+/*Page d'Acueille*/
+@media (max-width: 1050px) {
+    h1 {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .horizon {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .ground {
+        height: 30vh;
+        margin-top: 50vh;
+    }
+
+    .arrow_container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 350px) {
+    .title {
+        margin-top: 40vh;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        line-height: 5vh;
+    }
+
+    .ground {
+        margin-top: 10vh;
+    }
+
+    .arrow_container {
+        transform: scale(0.5);
+    }
+}
+
+/*Page Principale*/
+@media (max-width: 1050px) {
+    .p1 {
+        font-size: 1em;
+    }
+
+    .strong {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 700px) {
+    .p1 {
+        font-size: 0.7em;
+    }
+
+    .strong {
+        font-size: 0.8em;
+    }
+
+    .iut {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .univ {
+        width: 70px;
+        height: 55px;
+    }
+    
+    .linkedin, .mail {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 470px) {
+    .p1 {
+        font-size: 0.6em;
+    }
+
+    .strong {
+        font-size: 0.7em;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iut {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .univ {
+        width: 50px;
+        height: 40px;
+    }
+    
+    .linkedin, .mail {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 350px) {
+    .p1 {
+        font-size: 0.4em;
+    }
+}
+
+
+
