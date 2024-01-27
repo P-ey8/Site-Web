@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,7 +37,7 @@
                 </div>
                 <div class="horizon"></div>
                 <div class="ground">
-                    <img src="img/grid2.png" alt="x"/>
+                    <img src="img/grid3.png" alt="x"/>
                 </div>
             </div>
             <div class="down_arrow">
@@ -48,8 +48,7 @@
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
                     <div class="text_box tb_up">
-                        <div class="text t_up"><p>Qui suis-je ?</p></div>
-                        <div class="pic p_up"></div>
+                        <div class="text"><p>Qui suis-je ?</p></div>
                     </div>
                 </div>
             </div>
@@ -78,8 +77,7 @@
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
                     <div class="text_box tb_down">
-                        <div class="text t_down"><p>Accueil</p></div>
-                        <div class="pic p_down"></div>
+                        <div class="text"><p>Accueil</p></div>
                     </div>
                 </div>
             </div>
@@ -92,8 +90,7 @@
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
                     <div class="text_box tb_right">
-                        <div class="text t_right"><p>Mon<br />Parcours</p></div>
-                        <div class="pic p_right"></div>
+                        <div class="text"><p>Mon<br />Parcours</p></div>
                     </div>
                 </div>
             </div>
@@ -118,7 +115,7 @@
                     </div>
                 </div>
                 <div class="presentation4">
-                    <p class="p1">Souhaitant travailler en tant qu'<span class="strong">Administrateur Système,
+                    <p class="p1">Souhaitant travailler en tant qu'<span class="strong"> Administrateur Système,
                      Réseaux et Sécurité</span>, je recherche actuellement une alternance pour l'année prochaine.</p>
                 </div>
             </div>
@@ -130,8 +127,7 @@
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
                     <div class="text_box tb_left">
-                        <div class="text t_left"><p>Mon<br />Portfolio</p></div>
-                        <div class="pic p_left"></div>
+                        <div class="text"><p>Mon<br />Portfolio</p></div>
                     </div>
                 </div>
             </div>
@@ -144,8 +140,7 @@
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
                     <div class="text_box tb_up">
-                        <div class="text t_up"><p>Mes<br />Passions</p></div>
-                        <div class="pic p_up"></div>
+                        <div class="text"><p>Mes<br />Passions</p></div>
                     </div>
                 </div>
             </div>
@@ -153,7 +148,14 @@
         </section>
 
         <!--Page Parcours-->
-        <section id="perso" class="left">
+        <section id="perso" class="full">
+            <div class="box1"></div>
+            <div class="up_arrow"></div>
+            <div class="box2"></div>
+            <div class="left_arrow"></div>
+            <div class="principale flex">
+                <div class="panel"><p>Work In Progress</p></div>
+            </div>
             <div class="right_arrow">
                 <div class="arrow_container">
                     <svg class="page_arrows dir_right" onclick="scrollToMyElement('main')">
@@ -163,13 +165,16 @@
                     </svg>
                 </div>
             </div>
-            <div class="principale">
-                <div class="panel"><p>Work In Progress</p></div>
-            </div>
+            <div class="box3"></div>
+            <div class="down_arrow"></div>
+            <div class="box4"></div>
         </section>
 
         <!--Portfolio-->
-        <section id="portfolio" class="right">
+        <section id="portfolio" class="lateral">
+            <div class="corner1"></div>
+            <div class="box1"><h1 class="section_title">Mon Portfolio</h1></div>
+            <div class="corner2"></div>
             <div class="left_arrow">
                 <div class="arrow_container">
                     <svg class="page_arrows dir_left" onclick="scrollToMyElement('main')">
@@ -179,12 +184,128 @@
                     </svg>
                 </div>
             </div>
-            <div class="principale">
-                <div class="panel"><p>Work In Progress</p></div>
+            <div class="principale flex">
+                <nav id="project_scroller">
+                    <div class="arrow_wrapper">
+                        <div><span class="small_arrow arrow--left"></span></div>
+                        <div class="project_section"><h2 class="text_arrow">Bienvenue</h2></div>
+                        <div><span class="small_arrow arrow--right"></span></div>
+                    </div>
+                </nav>
+                <div id="project_container">
+                    <div id="Bienvenue" class="block swiper_slide">
+                        <div id="intro">
+                            <p id="intro_title" class="strong">Bienvenue sur mon portfolio !</p>
+                            <p id="intro_desc">Sur cette page, je vais partager avec vous mes projets 
+                                personnels et professionnels que j'ai réalisés durant mes études.</p>
+                        </div>
+                    </div>
+                    <div id="Réseaux" class="block swiper_slide">
+                        <div class="projet_s">
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1lgrmby_O4fxybucem5BAdANFOyFYxXbC/view?usp=drive_link" target="_blank">
+                                        Fichier PKT: Sécurité</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1Dsq-gavjofLWVHz5JmzVVn4mZ3ZFf59t/view?usp=drive_link" target="_blank">
+                                        Fichier PKT: VLAN</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1tjYJBDoR_70AAmCcKM69wuIYPGeEZckm/view?usp=drive_link" target="_blank">
+                                        Fichier PKT: Redondance</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                            Dans le cadre de mes travaux pratiques à l'Université, j'ai
+                                            appris à configurer du matériel Cisco (switch et routeur) afin 
+                                            de faire communiquer plusieurs machines entre elles.
+                                        </p><br />
+                                        <p>
+                                            J'ai notamment pu découvrir les notions de vlan et de redondance,
+                                            et aussi comment sécuriser des équipements actifs.
+                                        </p><br />
+                                        <p>
+                                            J'ai pu à la fois m'exercer sur simulateur (Cisco Packet Tracer), et
+                                            aussi sur du vrai matériel cisco.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Configuration des<br />équipements actifs</h2>
+                                </div>
+                                <div class="projet_img"><img src="img/cisco1.png" alt="schéma réseau"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1KAlIE6eQo2x0IlLZVraVmiPaqBAgkZvg/view?usp=drive_link" target="_blank">
+                                        Fichier PDF: Compte Rendu</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                            Dans le cadre d'un projet encadré à l'Université, j'ai appris
+                                            à étudier et analyser les caractéristiques et le fonctionnement de
+                                            mon réseau domestique.
+                                        </p><br />
+                                        <p>
+                                            J'ai pu apprendre les notions d'IP privé et public, de NAT, d'AS
+                                            ainsi que le fonctionnement d'une box internet, et comment celle-ci
+                                            intéragit avec mon réseau local et les réseaux distants.
+                                        </p><br />
+                                        <p>
+                                            J'ai ainsi pu améliorer mes compétences sur l'utilisation
+                                            de l'outil Wireshark, et des différents protocoles utilisés au
+                                            sein d'un réseau local.
+                                        </p><br />
+                                    </div>
+                                    <h2 class="projet_title">Étude d'un<br />réseau domestique</h2>
+                                </div>
+                                <div class="projet_img"><img src="img/wireshark1.png" alt="schéma réseau"/></div>
+                            </div>
+                            <div class="projet"></div>
+                        </div>
+                    </div>
+                    <div id="Projets" class="block swiper_slide">
+                        <div class="projet_s">
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1WtF6Kff1V4b3Ss7Yd6f0vGDKbFAtADwb/view?usp=drive_link" target="_blank">
+                                        Fichier PDF: Compte Rendu</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1-CXYw4BhzJRMsrosGM3We7DXvh_jJr_q/view?usp=drive_link" target="_blank">
+                                        Fichier PDF: Soutenance Orale</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                            Dans le cadre d'un projet encadré à l'Université, en collaboration avec Thales, 
+                                            j'ai appris à diriger un projet en équipe, de la définition des besoins,
+                                            à la réalisation du produit final.
+                                        </p><br />
+                                        <p>
+                                            J'ai pu apprendre à mettre en oeuvre les différentes techniques liées à la
+                                            gestion de projet (diagramme de Gant, RACI, analyse des risques) afin de respecter
+                                            au mieux les délais et les besoins du client.
+                                        </p><br />
+                                        <p>
+                                            Ce projet a permis à tout le groupe de développer de solides compétences professionnelles
+                                            telles que le travail d'équipe, savoir s'organiser et gérer un planning (et les imprévus...)
+                                        </p><br />
+                                    </div>
+                                    <h2 class="projet_title">Projet Checklist<br />Thales Alenia Space</h2>
+                                </div>
+                                <div class="projet_img"><img src="img/thales1.png" alt="schéma réseau"/></div>
+                            </div>
+                            <div class="projet"></div>
+                            <div class="projet"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="right_arrow"></div>
+            <div class="corner3"></div>
+            <div class="box3"></div>
+            <div class="corner4"></div>
         </section>
 
-        <section id="passion" class="top">
+        <!--Passion-->
+        <section id="passion" class="full">
+            <div class="box1"></div>
             <div class="up_arrow">
                 <div class="arrow_container">
                     <svg class="page_arrows dir_top" onclick="scrollToMyElement('main')">
@@ -194,13 +315,19 @@
                     </svg>
                 </div>
             </div>
-            <div class="principale">
+            <div class="box2"></div>
+            <div class="left_arrow"></div>
+            <div class="principale flex">
                 <div class="panel"><p>Work In Progress</p></div>
             </div>
+            <div class="right_arrow"></div>
+            <div class="box3"></div>
+            <div class="down_arrow"></div>
+            <div class="box4"></div>
         </section>
 
 
-<!-------------------------------------------------JS------------------------------------------------------->
+<!--....................................................JS........................................................-->
 
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -255,5 +382,96 @@
                 alert("Email copié"); // Show an alert to confirm
             }
         </script>
+
+        <!--Swiper-->
+        <script>
+            const projectContainer = document.getElementById('project_container');
+            const arrowLeft = document.querySelector('.arrow--left');
+            const arrowRight = document.querySelector('.arrow--right');
+            const textArrow = document.querySelector('.text_arrow');
+
+            let currentSlide = 1;
+            const slides = projectContainer.querySelectorAll('.swiper_slide');
+            const slideCount = slides.length;
+
+            arrowLeft.addEventListener('click', () => {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    const slideId = slides[currentSlide - 1].id;
+                    projectContainer.scrollTo({
+                        left: document.getElementById(slideId).offsetLeft,
+                        behavior: 'smooth',
+                    });
+                    textArrow.textContent = slides[currentSlide - 1].getAttribute('id');
+                } else {
+                    currentSlide = slideCount;
+                    const slideId = slides[currentSlide - 1].id;
+                    projectContainer.scrollTo({
+                        left: document.getElementById(slideId).offsetLeft,
+                        behavior: 'smooth',
+                    });
+                    textArrow.textContent = slides[currentSlide - 1].getAttribute('id');
+                }
+                });
+
+                arrowRight.addEventListener('click', () => {
+                    if (currentSlide < slideCount) {
+                    currentSlide++;
+                    const slideId = slides[currentSlide - 1].id;
+                    projectContainer.scrollTo({
+                        left: document.getElementById(slideId).offsetLeft,
+                        behavior: 'smooth',
+                    });
+                    textArrow.textContent = slides[currentSlide - 1].getAttribute('id');
+                    } else {
+                        currentSlide = 1;
+                        const slideId = slides[currentSlide - 1].id;
+                        projectContainer.scrollTo({
+                            left: document.getElementById(slideId).offsetLeft,
+                            behavior: 'smooth',
+                        });
+                        textArrow.textContent = slides[currentSlide - 1].getAttribute('id');
+                    }
+                    });
+        </script>
+
+        <!--Animation Projet (version JS)
+        <script>
+            // Sélectionnez votre élément
+            var monElement = document.querySelector('.monElement');
+
+            // Définissez vos animations
+            var monAnimation = monElement.animate([
+                { /* état initial */ },
+                { /* état final */ }
+            ], {
+            duration: 500,
+            fill: 'forwards'
+            });
+
+            var monAnimationInverse = monElement.animate([
+                { /* état final */ },
+                { /* état initial */ }
+            ], {
+            duration: 500,
+            fill: 'forwards'
+            });
+
+            // Par défaut, jouez l'animation inverse (pour revenir à l'état initial)
+            monAnimationInverse.pause();
+
+            // Lorsque le curseur est sur l'élément, jouez l'animation
+            monElement.addEventListener('mouseover', function() {
+                monAnimation.play();
+                monAnimationInverse.pause();
+            });
+
+            // Lorsque le curseur n'est pas sur l'élément, jouez l'animation inverse
+            monElement.addEventListener('mouseout', function() {
+                monAnimation.pause();
+                monAnimationInverse.play();
+            });
+
+        </script>-->
     </body>
 </html>
