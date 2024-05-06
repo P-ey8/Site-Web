@@ -11,17 +11,17 @@
 
 :root {
     --background: #5ecde3;
-    --arrow: #144266;
-    --arrow_h: #681faa;
+    --arrow: #0E1F3E;
+    --arrow_h: #f2be22;
     --arrow_a: #00f9ff;
     --small_arrow: #fff;
-    --small_arrow_h: #681faa;
-    --box: #691faade;
+    --small_arrow_h: #00f9ff;
+    --box: #f2be22;
     --color1: #2e6698;
     --color2: #144266;
-    --color3: #26154f;
-    --title1: #7a33b8;
-    --title2: #fff;
+    --color3: #0E1F3E;
+    --title1: #f2be22;
+    --title2: #0E1F3E;
     --text: #fff;
 }
 
@@ -55,6 +55,7 @@ a {
     width: inherit;
     height: inherit;
     color: var(--text);
+    text-decoration: none;
 }
 
 p, h1, h2 {
@@ -69,7 +70,7 @@ p {
 }
 
 .strong {
-    color: var(--background);
+    color: #0E1F3E;
 }
 
 .flex {
@@ -202,10 +203,9 @@ width / height*/
 /*----------Pages----------------------------------------------------------------------------------------------------------*/
 #welcome {
     background: linear-gradient(0deg,
-    rgba(104,31,170,1) 30%,
-    rgba(31,104,170,1) 60%,
-    rgba(27,77,114,1) 80%,
-    rgba(14,29,62,1) 95%);
+    #10DAE5 30%,
+    #295F90 60%,
+    #0E1F3E 90%);
     grid-column: 2;
     grid-row: 1;
 }
@@ -229,7 +229,7 @@ width / height*/
 }
 
 #passion {
-    background-color: var(--color3);
+    background-color: var(--color1);
     grid-column: 2;
     grid-row: 3;
 }
@@ -263,6 +263,7 @@ width / height*/
         polygon {
             fill: var(--arrow_a);
         }
+
     }
     
 }
@@ -285,6 +286,10 @@ svg:hover + .text_box {
     display: block;
     animation: boxappear 1s forwards;
 }
+
+/*.down_polygon {
+    fill: var(--arrow_a);
+}*/
 
 /*Direction des flèches*/
 .dir_left {
@@ -357,6 +362,40 @@ svg:hover + .text_box {
     }
 }
 
+
+/*-----Menu de navigation---------------------------------------------------------------------------------------------------*/
+nav {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(20, 66, 102, 0.7);
+    width: 100vw;
+    height: 70px;
+    z-index: 2;
+}
+
+.nav_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+
+.nav_block {
+    background-color: var(--arrow);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav_button {
+    width: auto;
+}
+
+.nav_block:hover {
+    background-color: var(--arrow_h);
+}
 
 /*-----Page d'accueil---------------------------------------------------------------------------------------------------*/
 .title {
@@ -496,7 +535,7 @@ svg:hover + .text_box {
     grid-template-areas: 
     'div1 div1 div2'
     'div3 div4 div4';
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
 }
@@ -518,27 +557,28 @@ svg:hover + .text_box {
 }
 
 .logo {
-    width: 100%;
-    height: 100%;
+    width: 50%;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
 .iut {
     width: 80px;
     height: 120px;
+    margin: 50% 0 0 0;
 }
 
 .univ {
     width: 100px;
     height: 80px;
+    margin: 50% 0 0 0;
 }
 
 .linkedin, .mail {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     cursor: pointer;
 }
 
@@ -563,7 +603,7 @@ svg:hover + .text_box {
     width: 100%;
     text-align: center;
     font-size: 3.5em;
-    color: var(--title1);
+    color: var(--title2);
     margin: 0;
     padding: 0;
 }
@@ -623,7 +663,7 @@ svg:hover + .text_box {
 
 .text_arrow {
     font-size: 2em;
-    color: var(--title2)
+    color: var(--text)
 }
 
 
@@ -639,7 +679,7 @@ svg:hover + .text_box {
 .projet_s {
     width: 95%;
     height: 80%;
-    margin: 60px auto 0;
+    margin: 65px auto 0;
     padding: 10px;
     background-color: var(--color1);
     display: flex;
@@ -739,9 +779,9 @@ svg:hover + .text_box {
 
 .projet_desc {
     position: absolute;
-    bottom: 150%;
+    bottom: 106%;
     width: 100%;
-    height: 150%;
+    height: 100%;
     background-color: var(--color3);
     z-index: 3;
 }
@@ -759,20 +799,21 @@ svg:hover + .text_box {
 }
 
 .projet_text {
-    font-size: 0.6em;
+    font-size: 1rem;
     width: 100%;
     height: 100%;
     padding: 15px;
+    overflow-y: scroll;
 }
 
 .projet_title {
-    font-size: 1.4em;
-    color: var(--title2);
+    font-size: 1.4rem;
+    color: var(--text);
     text-align: center;
     width: 100%;
-    height: 20%;
+    height: 36%;
     margin: 0;
-    padding: 0;
+    padding: 30px 0 0;
     background-color: var(--color2);
 }
 
@@ -816,21 +857,21 @@ svg:hover + .text_box {
 /*Animation Projet(version CSS)*/
 @keyframes project {
     from {
-        bottom: 100%;
+        bottom: 106%;
     }
 
     to {
-        bottom: -40%;
+        bottom: 6%;
     }
 }
 
 @keyframes project_reverse {
     from {
-        bottom: -40%;
+        bottom: 0%;
     }
 
     to {
-        bottom: 100%;
+        bottom: 106%;
     }
 }
 
@@ -923,14 +964,6 @@ svg:hover + .text_box {
 }
 
 @media (max-width: 650px) {
-    #welcome {
-        background: linear-gradient(0deg,
-        rgba(104,31,170,1) 10%,
-        rgba(31,104,170,1) 50%,
-        rgba(27,77,114,1) 75%,
-        rgba(14,29,62,1) 95%);
-    }
-
     .text_write {
         font-size: 2em;
     }
