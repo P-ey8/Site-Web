@@ -552,13 +552,16 @@ nav {
 }
 
 .presentation2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color2);
     grid-area: div2;
 }
 
 .logo {
     width: 50%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -567,13 +570,11 @@ nav {
 .iut {
     width: 80px;
     height: 120px;
-    margin: 50% 0 0 0;
 }
 
 .univ {
     width: 100px;
     height: 80px;
-    margin: 50% 0 0 0;
 }
 
 .linkedin, .mail {
@@ -588,6 +589,9 @@ nav {
 }
 
 .presentation3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color3);
     grid-area: div3;
 }
@@ -605,7 +609,6 @@ nav {
     font-size: 3.5em;
     color: var(--title2);
     margin: 0;
-    padding: 0;
 }
 
 #project_container {
