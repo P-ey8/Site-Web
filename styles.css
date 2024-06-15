@@ -52,6 +52,7 @@ img {
 }
 
 a {
+    font-family: Arial, sans-serif;
     width: inherit;
     height: inherit;
     color: var(--text);
@@ -80,25 +81,30 @@ p {
     align-items: center;
 }
 
+
+
 /*Patternes*/
+
+
+
 .full {
     display: grid;
     grid-template-areas: 
-    'top1 top1 arrow1 top2 top2' 
+    'c1 c1 arrow1 c2 c2' 
     'arrow2 cont cont cont arrow3'
-    'bottom1 bottom1 arrow4 bottom2 bottom2';
-    grid-template-columns: 1fr 10fr 1fr 10fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    'c3 c3 arrow4 c4 c4';
+    grid-template-columns: 10% 35% 10% 35% 10%;
+    grid-template-rows: 15% 70% 15%;
 }
 
 .lateral {
     display: grid;
     grid-template-areas: 
-    'c1 top1 top1 top1 c2' 
-    'arrow2 cont cont cont arrow3'
-    'c3 bottom1 bottom1 bottom1 c4';
-    grid-template-columns: 1fr 10fr 10fr 10fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    'c1 topP c2' 
+    'arrow2 cont arrow3'
+    'c3 bottomP c4';
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
 }
 
 .bottom {
@@ -106,26 +112,23 @@ p {
     grid-template-areas: 
     'cont cont cont' 
     'cont cont cont'
-    'bottom1 arrow4 bottom2';
+    'c3 arrow4 c4';
     grid-template-columns: 10fr 1fr 10fr;
     grid-template-rows: 10fr 1fr;
 }
 
+
+
 /*Box*/
+
+
+
 .box1 {
-    grid-area: top1;
+    grid-area: topP;
 }
 
 .box2 {
-    grid-area: top2;
-}
-
-.box3 {
-    grid-area: bottom1;
-}
-
-.box4 {
-    grid-area: bottom2;
+    grid-area: bottomP;
 }
 
 .principale {
@@ -160,7 +163,6 @@ p {
 .down_arrow {
     grid-area: arrow4;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: last baseline;
     z-index: 3;
@@ -200,7 +202,26 @@ width / height*/
     border-radius: 10px;
 }
 
+
+
+
+
+
+
+
+
+
 /*----------Pages----------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 #welcome {
     background: linear-gradient(0deg,
     #10DAE5 30%,
@@ -234,7 +255,12 @@ width / height*/
     grid-row: 3;
 }
 
+
+
 /*-----Flèche et animation hover en SCSS------------------------------------------------------------------------------------*/
+
+
+
 .page_arrows {
     width: 75px;
     height: 65px;
@@ -363,7 +389,11 @@ svg:hover + .text_box {
 }
 
 
+
 /*-----Menu de navigation---------------------------------------------------------------------------------------------------*/
+
+
+
 nav {
     position: fixed;
     bottom: 0px;
@@ -397,7 +427,26 @@ nav {
     background-color: var(--arrow_h);
 }
 
+
+
+
+
+
+
+
+
+
 /*-----Page d'accueil---------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 .title {
     position: relative;
     top: 5%;
@@ -529,14 +578,33 @@ nav {
     }
 }
 
+
+
+
+
+
+
+
+
+
 /*------Page Principale--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 .grid1 {
     display: grid;
     grid-template-areas: 
     'div1 div1 div2'
     'div3 div4 div4';
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 50% 50%;
     grid-gap: 10px;
 }
 
@@ -568,13 +636,13 @@ nav {
 }
 
 .iut {
-    width: 80px;
-    height: 120px;
+    width: 60px;
+    height: 80px;
 }
 
 .univ {
-    width: 100px;
-    height: 80px;
+    width: 60px;
+    height: 40px;
 }
 
 .linkedin, .mail {
@@ -592,7 +660,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color3);
+    background-color: var(--color2);
     grid-area: div3;
 }
 
@@ -602,7 +670,26 @@ nav {
     grid-area: div4;
 }
 
+
+
+
+
+
+
+
+
+
 /*----------Page Portfolio----------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 .section_title {
     width: 100%;
     text-align: center;
@@ -628,7 +715,12 @@ nav {
     z-index: 3;
 }
 
+
+
 /*Flèche de navigation*/
+
+
+
 .small_arrow {
     display: inline-block;
     width: 25px;
@@ -809,6 +901,10 @@ nav {
     overflow-y: scroll;
 }
 
+.projet_text > p {
+    font-family: Arial, sans-serif;
+}
+
 .projet_title {
     font-size: 1.4rem;
     color: var(--text);
@@ -857,7 +953,11 @@ nav {
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
+
+
 /*Animation Projet(version CSS)*/
+
+
 @keyframes project {
     from {
         bottom: 106%;
@@ -919,7 +1019,25 @@ nav {
 }
 
 
+
+
+
+
+
+
+
+
 /*----------Page Parcours, Passion----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
 .panel {
     background-color: #3e0835;
     width: 40%;
@@ -933,9 +1051,21 @@ nav {
 }
 
 
+
+
+
 /*-----Media Querries----------------------------------------------------------------------------------------------------------*/
 
+
+
+
+
+
+
+
+
 /*-----Page d'Accueil-----------------------------------------------------------------------------------------------------------*/
+
 @media (max-width: 1050px) {
     .text_write {
         font-size: 3.5em;
@@ -977,6 +1107,7 @@ nav {
 }
 
 /*-------Page Principale------------------------------------------------------------------------------------------------------*/
+
 @media (max-width: 1050px) {
     .p1 {
         font-size: 1em;
@@ -1052,6 +1183,7 @@ nav {
 }
 
 /*------Page Portfolio---------------------------------------------------------------------------------------------------------*/
+
 @media (max-width: 1050px) {
     #intro_title {
         font-size: 2em;
