@@ -641,8 +641,8 @@ nav {
 }
 
 .univ {
-    width: 60px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
 }
 
 .linkedin, .mail {
@@ -799,11 +799,15 @@ nav {
 }
 
 #intro_title {
-    font-size: 3em;
+    font-size: 3rem;
 }
 
-#intro_desc {
-    font-size: 2em;
+#intro_desc, #intro_cv {
+    font-size: 1.5rem;
+}
+
+.cv {
+    color: var(--arrow_a);
 }
 
 .projet {
