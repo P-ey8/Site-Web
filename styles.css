@@ -14,7 +14,7 @@
     --arrow: #0E1F3E;
     --arrow_h: #f2be22;
     --arrow_a: #00f9ff;
-    --small_arrow: #fff;
+    --small_arrow: #f2be22;
     --small_arrow_h: #00f9ff;
     --box: #f2be22;
     --color1: #2e6698;
@@ -721,7 +721,16 @@ nav {
 
 
 
-.small_arrow {
+.arrow_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+
+.small_arrow_left_big, .small_arrow_right_big {
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -729,26 +738,56 @@ nav {
     border-right: 4px solid var(--small_arrow);
 }
 
-.arrow--left {
+.small_arrow_left_medium, .small_arrow_right_medium {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid var(--small_arrow);
+    border-right: 2px solid var(--small_arrow);
+}
+
+.small_arrow_left_little, .small_arrow_right_little {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid var(--small_arrow);
+    border-right: 1px solid var(--small_arrow);
+}
+
+.small_arrow_left_big, .small_arrow_left_medium, .small_arrow_left_little {
     transform: rotate(-135deg);
 }
 
-.arrow--right {
+.small_arrow_right_big, .small_arrow_right_medium, .small_arrow_right_little {
     transform: rotate(45deg);
 }
 
-.arrow_wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 25%;
-    height: 100%;
-    margin: auto;
+.small_arrow_left_little, .small_arrow_right_big {
+    margin-right: -10px;
 }
 
-.small_arrow:hover {
-    border-top: 4px solid var(--small_arrow_h);
-    border-right: 4px solid var(--small_arrow_h);
+.small_arrow_left_big, .small_arrow_right_little {
+    margin-left: -10px;
+
+}
+
+.arrow--left {
+    width: 100px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.arrow--right {
+    width: 100px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.arrow--left:hover, .arrow--right:hover {
     cursor: pointer;
 }
 
