@@ -237,7 +237,7 @@ width / height*/
     grid-row: 2;
 }
 
-#perso {
+#passions {
     background-color: var(--color1);
     grid-column: 1;
     grid-row: 2;
@@ -249,8 +249,8 @@ width / height*/
     grid-row: 2;
 }
 
-#passion {
-    background-color: var(--color1);
+#monalt {
+    background-color: var(--background);
     grid-column: 2;
     grid-row: 3;
 }
@@ -1070,15 +1070,7 @@ nav {
 
 
 
-/*----------Page Parcours, Passion----------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
+/*----------Page Alternance----------------------------------------------------------------------------------------*/
 
 
 .panel {
@@ -1091,6 +1083,58 @@ nav {
     color: #fff;
     font-size: 3em;
     text-align: center;
+}
+
+
+/*-----Mon Alternance-----------------------------------------------------------------------------------------------------------*/
+.grid2 {
+    display: grid;
+    grid-template-areas: 
+    'divA1 divA1'
+    'divA2 divA3';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 10px;
+}
+
+.presentationA1 {
+    background-color: var(--color1);
+    grid-area: divA1;
+    padding: 20px;
+    text-align: justify;
+}
+
+.presentationA1 > h2, .presentationA2 > h2, .presentationA3 > h2{
+    text-align: center;
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 0 25px;
+}
+
+.presentationA2 {
+    background-color: var(--color1);
+    grid-area: divA2;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.presentationA3 {
+    background-color: var(--color1);
+    grid-area: divA3;
+    padding: 20px;
+    text-align: justify;
+    overflow-y: scroll;
+}
+
+.presentationA2 > h2, .presentationA3 > h2{
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 0 5px;
+}
+
+.missions_list > li{
+    font-family: Pixeloid;
+    color: #FFF;
 }
 
 
