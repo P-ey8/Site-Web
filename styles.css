@@ -22,7 +22,11 @@
     --color3: #0E1F3E;
     --title1: #f2be22;
     --title2: #0E1F3E;
+    --title3: #333;
+    --transition_black: #555;
+    --transition_white: #e9e9e9;
     --text: #fff;
+    --active: #00bcd4;
 }
 
 html, body {
@@ -246,6 +250,12 @@ width / height*/
 #portfolio {
     background-color: var(--background);
     grid-column: 3;
+    grid-row: 2;
+}
+
+#skills {
+    background-color: var(--background);
+    grid-column: 4;
     grid-row: 2;
 }
 
@@ -616,7 +626,7 @@ nav {
 
 .p1 {
     font-size: 1.5em;
-    text-align: left;
+    text-align: justify;
 }
 
 .presentation2 {
@@ -631,23 +641,23 @@ nav {
     width: 50%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .iut {
-    width: 60px;
-    height: 80px;
+    width: 70px;
+    height: 90px;
 }
 
 .univ {
-    width: 70px;
-    height: 50px;
+    width: 90px;
+    height: 70px;
 }
 
 .linkedin, .mail {
-    width: 75px;
-    height: 75px;
+    width: 90px;
+    height: 90px;
     cursor: pointer;
 }
 
@@ -681,15 +691,6 @@ nav {
 
 /*----------Page Portfolio----------------------------------------------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
 .section_title {
     width: 100%;
     text-align: center;
@@ -715,11 +716,7 @@ nav {
     z-index: 3;
 }
 
-
-
 /*Flèche de navigation*/
-
-
 
 .arrow_wrapper {
     display: flex;
@@ -1070,6 +1067,94 @@ nav {
 
 
 
+/*----------Page Compétences-----------------------------------------------------------------------------------------------------------------------------*/
+
+.skills_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 100%;
+    height: 70vh;
+    margin: 25px auto 0;
+    background-color: var(--text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skills_sidebar {
+    padding: 20px;
+    background-color: var(--title3);
+    color: var(--text);
+}
+
+.skills_sidebar h2 {
+    margin-top: 0;
+    color: var(--active);
+}
+
+#domain_list {
+    padding: 0;
+}
+
+#domain_list div {
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--transition_black);
+    transition: background-color 0.3s ease;
+}
+
+#domain_list div:last-child {
+    border-bottom: none;
+}
+
+#domain_list div:hover {
+    background-color: var(--transition_black);
+}
+
+#domain_list div.active {
+    background-color: var(--active);
+    font-weight: bold;
+}
+
+.skills_display {
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.skills_display h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#skill_list {
+    list-style: none;
+    padding: 0;
+}
+
+#skill_list li {
+    background-color: var(--transition_white);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------Page Alternance----------------------------------------------------------------------------------------*/
 
 
@@ -1135,6 +1220,11 @@ nav {
 .missions_list > li{
     font-family: Pixeloid;
     color: #FFF;
+}
+
+.clickableText {
+    font-family: Pixeloid, sans-serif;
+    color: var( --color3);
 }
 
 

@@ -91,10 +91,11 @@
             <div class="nav_section">
                 <a href="#welcome" class="nav_button"><div class="nav_block">Accueil</div></a>
                 <a href="#main" class="nav_button"><div class="nav_block">Qui suis-je ?</div></a>
+                <a href="#monalt" class="nav_button"><div class="nav_block">Mon Alternance</div></a>
             </div>
             <div class="nav_section">
                 <a href="#portfolio" class="nav_button"><div class="nav_block">Mon Portfolio</div></a>
-                <a href="#monalt" class="nav_button"><div class="nav_block">Mon Alternance</div></a>
+                <a href="#skills" class="nav_button"><div class="nav_block">Mes Compétences</div></a>
                 <a href="#passions" class="nav_button"><div class="nav_block">Mes Passions</div></a>
             </div>
         </nav>
@@ -275,6 +276,9 @@
                         <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
+                    <div class="text_box tb_right">
+                        <div class="text"><p>Qui<br />suis-je ?</p></div>
+                    </div>
                 </div>
             </div>
             <div class="principale flex">
@@ -302,8 +306,156 @@
                             <p id="intro_cv">Pour commencer, voici <a class="cv" href="https://drive.google.com/file/d/1r_LnEd9u7_NMp0mqdLNWxZodNNtNrTfs/view?usp=drive_link" target="_blank">mon CV</a></p>
                         </div>
                     </div>
+                    <div id="Cybersécurité" class="block swiper_slide">
+                        <div class="projet_s">
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1fPoFfgc_OmG5wTZxbU_YRtdZ0DVyMHpZ/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Énoncé du TP</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1h0gMEkGzRdopl3kzaLB_-UJv8EMpawrX/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Annexe</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Dans le cadre d'un cours que l'on a eu sur la sécurité des réseau LAN, il nous a 
+                                        été demandé de concevoir un TP permettant de comprendre les différentes vulnérabilités 
+                                        (et contres mesures à mettre en place) de la couche d'accès.
+                                        </p><br /><br />
+                                        <p>
+                                        Pour ce TP, basé sur le thème de Jojo's Bizarre Adventure, nous nous sommes focalisé sur les attaques de type 
+                                        VLAN hoping / spoofing, BPDU storm, DHCP spoofing et DHCP starvation. Ce fut l'occasion pour nous d'approfondir 
+                                        nos connaissances sur le sujet, que nous avions commencé à aborder dans des projets ultérieur.
+                                        </p><br /><br />
+                                        <p>
+                                        Ainsi, cet exercice nous a montré les bases de la sécurisation d'un réseau LAN, et à quel point il est fondamental
+                                        de mettre ces contres mesures en pratique. En effet, ce genre de cyberattaque ne sont pas les plus répandu, ce qui
+                                        peut induire en erreur les entreprises, pensant que sécurisé cette partie du réseau ne sert à rien. Cependant, les menaces
+                                        ne proviennent pas uniquement le extérieur...
+                                        </p><br /><br />
+                                    </div>
+                                    <h2 class="projet_title">TP Sécurité des<br />réseaux LAN</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/sbr.webp" alt="jojo part 7 announcement"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1bK8J7mWYunSLcF1A_fGdxfNLudt5su1A/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Rapport de pentest</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Au cours de ce pentest, j'ai appris à utiliser deux nouveaux outils :<br /><br />
+                                        - Burp Suite, permettant de récupérer et exploiter les failles de sécurité d'une
+                                        application web (analyse et traitement des requêtes HTTP)<br /><br />
+                                        - Metasploit, permettant d'exploiter facilement des CVE en récupérant automatiquement les
+                                        exploits qui y sont associés, et en les exécutant sur la machine à tester.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Méthodologie de<br />Pentest n°4</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/pentest4.png" alt="liste fichiers avec flag"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1sDKb_i5cVgfaM5T_NfzmbjBWa0miZHwy/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Rapport de pentest</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Ce pentest reprend les éléments du pentest précédent en y rajoutant de la difficulté. Ce qui pour moi est
+                                        important à relevé ici, c'est la manière de structurer les informations recueilli.<br /><br />
+                                        </p>
+                                        <p>
+                                        En effet, j'ai compris qu'il était important d'apprendre à retransmettre l'information dans un rapport de pentest, 
+                                        permettant de restituer les informations apprises (concernant la méthodologie employée, les CVE découvertes) 
+                                        pour rendre le rapport clair à comprendre, même pour queqlun'un qui ne s'y connait pas grand chose.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Méthodologie de<br />Pentest n°3</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/pentest3.png" alt="liste fichiers avec flag"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/11h3dI4lDpHhV6Oq49xLHx2PX96ZmRZgY/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Rapport de pentest</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Dans ce deuxième pentest, j'ai pu enrichir mes compétences en matière d'analyse et de détection de vulnérabilités
+                                        en apprenant à me servir du logiciel Nessus (scanner de vulnérabilité, complément à NMAP).
+                                        </p><br />
+                                        <p>
+                                        De plus, j'ai appris à utiliser SQLMAP permettant d'automatiser les attaques de type injection SQL permettant d'accéder
+                                        à la base de donnée d'une application (pour la visualiser ou la modifier sans autorisation). En l'occurence, je m'en suis
+                                        servi ici pour récupérer les comptes utilisateurs et les hash des mots de passes associés, me permettant de rentrer dans l'
+                                        application.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Méthodologie de<br />Pentest n°2</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/pentest2.png" alt="liste fichiers avec flag"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1I97zgpFMa_aqYX3_LjLZjy6fNihrpR-S/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Rapport de pentest</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        La deuxième année de mon BUT fut l'occasion pour moi de me spécialiser en cybersécurité. Une partie
+                                        de cette spécialisation consistait à réaliser des tests de pénétration sous forme de Capture The Flag
+                                        sur des environnements virtualisés fictif. Ainsi, j'ai pu faire mon premier pentest, me permettant 
+                                        d'apprendre les bases du hacking.
+                                        </p><br />
+                                        <p>
+                                        Ce premier pentest m'a permis de découvrir les différentes phases constituant un test de pénétration (collecte,
+                                        analyse du système,évalutation,exploitation,analyse des risques, remédiation), et à apprendre l'utilisation des
+                                        mécanismes de base (NMAP, backdoor,...).
+                                        </p><br />
+                                        <p>
+                                        Avec le logiciel NMAP, j'ai pu apprendre à faire un scan du réseau et à détecter les machines présentes dessus, à
+                                        analyser les ports et les vulnérabilités des machines, tout en apprenant comment les exploiter.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Méthodologie de<br />Pentest n°1</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/pentest1.png" alt="liste fichiers avec flag"/></div>
+                            </div>
+                        </div>
+                    </div>
                     <div id="Réseaux" class="block swiper_slide">
                         <div class="projet_s">
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p>CCNA2</p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                            J'ai eu encore plus de chance cette fois-ci, car j'ai pu continuer mon parcours chez Cisco en passant la certification CCNA 2.
+                                        </p><br />
+                                        <p>
+                                            Cette certification permettait de valider les notions de base sur la commutation, le routage et le wifi:<br /><br />
+                                            - Configurer les VLAN / routage inter-VLAN en appliquant les meilleurs pratiques de sécurité<br /><br />
+                                            - Dépanner le routage inter-VLAN sur périphériques de couche 3<br /><br />
+                                            - Configurer la redondance sur un réseau commuté à l'aide de STP et d'Etherchannel<br /><br />
+                                            - Dépanner Etherchannel sur un réseau commuté<br /><br />
+                                            - Configurer l'allocation dynamique d'adresse IPv6<br /><br />
+                                            - Configurer les WLAN en utilisant un WLC et les meilleurs pratques de sécurité de couche 2<br /><br />
+                                            - Configurer la sécurité des commutateurs pour atténuer les attaques du réseau local<br /><br />
+                                            - Configurer le routage statique IPv4 et IPv6 sur un routeur
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Certification Cisco<br />CCNAv7 n°2</h2>
+                                </div>
+                                <div class="projet_img"><img src="img/ccna.png" alt="schéma réseau"/></div>
+                            </div>
                             <div class="projet">
                                 <div class="projet_fic flex">
                                     <div class="fic"><p>CCNA1</p></div>
@@ -439,13 +591,103 @@
                                 </div>
                                 <div class="projet_img"><img src="img/wireshark1.png" alt="schéma réseau"/></div>
                             </div>
-                            <div class="projet soon flex">
-                                <div class="soon_box"><p>Coming Soon !</p></div>
-                            </div>
                         </div>
                     </div>
                     <div id="Projets" class="block swiper_slide">
                         <div class="projet_s">
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/15JGMaciAFklIy5IQPTDKrXzYZkCJM_n6/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Rapport</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1cRdwTcyhrO6HNks02jQNHs4mz35ecRre/view?usp=drive_link" target="_blank">
+                                    Fichier HTML : Exemple de résultat</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1-ranomYwrH0BK05FrT20kvMapIvCPavW/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Diaporama de présentation</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Le but de ce projet était de concevoir (sans le coder) un outil permettant de réaliser automatiquement un
+                                        audit de sécurité d'une application web.
+                                        </p><br />
+                                        <p>
+                                        Pour ce faire, nous avons d'abord procédé à l'établissement du périmètre à tester, ainsi que les outils à utiliser.
+                                        Nous avions pour conditions de travailler avec des outils open source (licence non contaminantes), en mode white hat 
+                                        (sans modification ou perturbation de l'application tester). Ensuite, nous avons créé un système de scoring pour attribuer
+                                        une note globale à l'application, permettant de définir son niveau de vulnérabilité. Enfin, nous avons concu des maquettes
+                                        permettant de visualiser l'interface de l'outil et la page de résultat obtenue.
+                                        </p><br />
+                                        <p>
+                                        Ce fut un projet très intéressant, où nous avons pu mener une véritable analyse des besoins du client, et une véritable étude 
+                                        sur les solutions à utiliser pour y répondre.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Concevoir un outil<br />d'audit de sécurité</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/SHS.png" alt="schéma topologie"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/15PhghZq-RqepuYtNd_vNNngGTtFKqE-N/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Rapport</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1rAHzCDHKzNDUbunwZZ5PGdW2pQS0Cdd_/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : CGS</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1wFwzSwcvpEUBr_8-PacorpIukYmXcp6Q/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Devis</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Ce projet fut l'occasion de mettre en pratique nos compétences de pentester dans un cas concret. Bien qu'il s'agisse
+                                        ici d'une "simulation" (pentest effectué sur un environnement de test virtualisé), nous nous sommes réellement mis dans la peau
+                                        d'un hacker éthique devant auditer une entreprise cliente.
+                                        </p><br />
+                                        <p>
+                                        Ainsi, l'étape du pentest n'était au final que petite partie de tous le travail à réaliser :<br /><br />
+                                        - D'une part, le rapport ce devait d'être complet et compréhensible par tous (même quelqu'un qui n'y
+                                        connait rien en cybersécurité). Celui-ci devait présenter en détail l'ensemble des CVE trouvée, leur conséquences
+                                        et quelles solutions pourraient être mise en place pour régler le problème.<br /><br />
+                                        - D'autre part, il y avait de nombreuses informations en annexe à fournir, permettant de poser les bases du pentest,
+                                        et de ce couvrir au yeux de la loi. Ces informations à fournir font l'objet de deux documents en particulier : un document 
+                                        listant l'ensemble des conditions générales de services (scope, date, délais, nature du pentest...) et un devis.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Réaliser un<br />rapport de pentest</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/projet_pentest.png" alt="schéma topologie"/></div>
+                            </div>
+                            <div class="projet">
+                                <div class="projet_fic flex">
+                                    <div class="fic"><p><a href="https://github.com/Eskimo241/Izi-Insta" target="_blank">
+                                        GitHub</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1yNYhvzMBI9F3nGmNTNoSYqoDggk_F0RP/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Manuel d'utilisation</a></p></div>
+                                    <div class="fic"><p><a href="https://drive.google.com/file/d/1H0vmcZ_otvUcfi2O6lkJWvblqQVLqVHW/view?usp=drive_link" target="_blank">
+                                    Fichier PDF : Diaporama de présentation</a></p></div>
+                                </div>
+                                <div class="projet_desc">
+                                    <div class="projet_text">
+                                        <p>
+                                        Ce projet avait pour but de mettre en pratiques nos compétences en programmation orientée objet (java notamment)
+                                        apprisent au cours de l'année. Nous avons ainsi créé une application Android du nom de Jojostagram, permettant
+                                        le partage d'image et de gif (fortement influencé par le manga Jojo's Bizarre Adventure) entre utilisateurs.
+                                        </p><br />
+                                        <p>
+                                        Entre autre, les utilisateurs procèdent d'abord par la création d'un compte sécurisé (mot de passe fort) et peuvent ensuite 
+                                        poster une image sur l'application qui sera ensuite visible par tous. Cette image pourra ensuite être likée, ce qui augmentera 
+                                        le compteur de like de l'utilisateur concerné, et le fera monter de niveau (JoeStars).
+                                        </p><br />
+                                        <p>
+                                        Nous avons énormément appris durant ce projet :<br /><br />
+                                        - Coder une interface graphique intéractif en Java sur Android Studio<br /><br />
+                                        - Concevoir un serveur Java communiquant avec l'application (via du PHP)<br /><br />
+                                        - Utiliser une API (Tenor) et la mettre en place sur notre application.
+                                        </p>
+                                    </div>
+                                    <h2 class="projet_title">Programmer une<br />application Android</h2>
+                                </div>
+                                <div class="projet_img"><img src="./img/jojostagram.png" alt="JOJO"/></div>
+                            </div>
                             <div class="projet">
                                 <div class="projet_fic flex">
                                     <div class="fic"><p><a href="https://drive.google.com/file/d/1KD3Y8qmoo-m2u3GjjErJLDZuE-RkWVM1/view?usp=drive_link" target="_blank">
@@ -491,6 +733,8 @@
                                         Fichier PDF : Compte Rendu</a></p></div>
                                     <div class="fic"><p><a href="https://drive.google.com/file/d/1XYzMJdnXS_xZPnLfa_C-z2xMcvU-FtEu/view?usp=drive_link" target="_blank">
                                         Fichier PDF : Soutenance Orale</a></p></div>
+                                    <div class="fic"><p><a href="https://github.com/Eskimo241/Thales07" target="_blank">
+                                        GitHub</a></p></div>
                                 </div>
                                 <div class="projet_desc">
                                     <div class="projet_text">
@@ -558,19 +802,13 @@
                                 </div>
                                 <div class="projet_img"><img src="img/network1.jpg" alt="image réseau"/></div>
                             </div>
-                            <div class="projet soon flex">
-                                <div class="soon_box"><p>Coming Soon !</p></div>
-                            </div>
-                            <div class="projet soon flex">
-                                <div class="soon_box"><p>Coming Soon !</p></div>
-                            </div>
-                            <div class="projet soon flex">
-                                <div class="soon_box"><p>Coming Soon !</p></div>
-                            </div>
                         </div>
                     </div>
                     <div id="Langues" class="block swiper_slide">
                         <div class="projet_s">
+                            <div class="projet soon flex">
+                                <div class="soon_box"><p>Coming Soon !</p></div>
+                            </div>
                             <div class="projet">
                                 <div class="projet_fic flex">
                                     <div class="fic"><p><a href="https://drive.google.com/file/d/1pOYa9kGlLYZ-5iR4Y9JtEImTXl0NKAXM/view?usp=drive_link" target="_blank">
@@ -616,13 +854,13 @@
                                 </div>
                                 <div class="projet_img"><img src="img/anglais1.png" alt="miniature video"/></div>
                             </div>
-                            <div class="projet soon flex">
-                                <div class="soon_box"><p>Coming Soon !</p></div>
-                            </div>
                         </div>
                     </div>
                     <div id="Communication" class="block swiper_slide">
                         <div class="projet_s">
+                            <div class="projet soon flex">
+                                <div class="soon_box"><p>Coming Soon !</p></div>
+                            </div>
                             <div class="projet">
                                 <div class="projet_fic flex">
                                     <div class="fic"><p>Numéro CSCV : 6RGE7MP</p></div>
@@ -662,12 +900,82 @@
                                 </div>
                                 <div class="projet_img"><img src="img/michell.png" alt="Première de couverture du guide"/></div>
                             </div>
-                            <div class="projet soon flex">
-                                <div class="soon_box"><p>Coming Soon !</p></div>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="right_arrow">
+                <div class="arrow_container">
+                    <svg class="page_arrows dir_right" onclick="scrollToMyElement('skills')">
+                        <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+                        <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+                        <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+                    </svg>
+                    <div class="text_box tb_left">
+                        <div class="text"><p>Mes<br />Compétences</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="corner3"></div>
+            <div class="box2"></div>
+            <div class="corner4"></div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!--Mes Compétences-->
+
+
+
+
+
+
+
+
+
+        <section id="skills" class="lateral">
+            <div class="corner1"></div>
+            <div class="box1"><div class="box1"><h1 class="section_title">Mes Compétences</h1></div></div>
+            <div class="corner2"></div>
+            <div class="left_arrow">
+                <div class="arrow_container">
+                    <svg class="page_arrows dir_left" onclick="scrollToMyElement('portfolio')">
+                        <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+                        <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+                        <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+                    </svg>
+                    <div class="text_box tb_right">
+                        <div class="text"><p>Mon<br />Portfolio</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="principale">
+               <div class="skills_container">
+
+                    <div class="skills_sidebar">
+                        <h2>Domaines</h2>
+                        <div id="domain_list">
+                            <div data-domain="Cybersécurité" class="active">Cybersécurité</div>
+                            <div data-domain="Réseaux">Réseaux</div>
+                            <div data-domain="Projets">Projets</div>
+                            <div data-domain="Langues">Langues</div>
+                            <div data-domain="Communication">Communication</div>
+                        </div>
+                    </div>
+
+                    <div class="skills_display">
+                        <h2>Compétences</h2>
+                        <ul id="skill_list"></ul>
+                    </div>
+
+               </div>
             </div>
             <div class="right_arrow"></div>
             <div class="corner3"></div>
@@ -704,6 +1012,9 @@
                         <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
                         <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
                     </svg>
+                    <div class="text_box tb_down">
+                        <div class="text"><p>Qui suis-je ?</p></div>
+                    </div>
                 </div>
             </div>
             <div class="corner2"></div>
@@ -711,7 +1022,7 @@
             <div class="principale grid2">
                 <div class="presentationA1">
                     <h2>Présentation de l'entreprise :</h2>
-                    <p> Le Centre de Traitement Informatique (CTI) de Sophia Antipolis assure la mise à disposition de son
+                    <p> Le <a class="clickableText" href="https://www.linkedin.com/company/cti-sophia-antipolis/" target="_blank">Centre de Traitement Informatique (CTI) de Sophia Antipolis</a> assure la mise à disposition de son
                         infrastructure et le fonctionnement optimale de celle-ci, pour les 59 Organismes du Régime Général en
                         France métropolitaine et en outremer. Il a aussi la gestion de 7 Régimes Mutuelles partenaire, et des CPAM qui
                         leur sont associées, ainsi que du Centre d'Éditique à Marseille, assurant la production éditique national
@@ -905,5 +1216,160 @@
             });
 
         </script>-->
+
+        <!--Affichage des compétences-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const domainList = document.getElementById('domain_list');
+                const skillList = document.getElementById('skill_list');
+
+                // Structure de données pour tes compétences
+                const skillsData = {
+                    Cybersécurité: [
+                        "Concevoir un TP didactique sur la sécurité des réseaux LAN pour illustrer les vulnérabilités courantes et les contremesures associées.",
+                        "Connaissances approfondies sur les attaques de type VLAN hopping, VLAN spoofing, BPDU storm, DHCP spoofing et DHCP starvation.",
+                        "Mettre en œuvre les bases de la sécurisation d'un réseau LAN pour prévenir les menaces internes et externes.",
+                        "Utiliser Burp Suite pour analyser et traiter les requêtes HTTP afin de détecter et exploiter les failles de sécurité des applications web.",
+                        "Exploiter Metasploit pour automatiser la découverte et l'exécution d'exploits liés aux CVE.",
+                        "Structurer les informations recueillies lors d'un pentest pour rédiger des rapports clairs et compréhensibles, même pour un public non expert.",
+                        "Retransmettre efficacement la méthodologie employée et les CVE découvertes dans un rapport de pentest.",
+                        "Analyser et détecter des vulnérabilités grâce à l'utilisation de Nessus et de NMAP.",
+                        "Exploiter les vulnérabilités découvertes sur les machines via des outils et techniques appropriés.",
+                        "Automatiser les attaques par injection SQL avec SQLMAP pour accéder et manipuler les bases de données d'applications.",
+                        "Récupérer des informations sensibles (comptes utilisateurs, hash de mots de passe) via des attaques d'injection SQL.",
+                        "Réaliser des tests de pénétration sous forme de Capture The Flag sur des environnements virtualisés fictifs.",
+                        "Maîtriser les différentes phases d'un test de pénétration : collecte d'informations, analyse du système, évaluation des vulnérabilités, exploitation, analyse des risques et remédiation.",
+                        "Connaissances de base sur l'utilisation des mécanismes de hacking et l'exploitation de backdoors.",
+                        "Effectuer des scans réseau avec NMAP pour détecter les machines, analyser les ports ouverts et identifier les vulnérabilités."
+                    ],
+                    Réseaux: [
+                        "Configurer des switches et périphériques finaux pour l'accès aux ressources locales et distantes",
+                        "Expliquer le fonctionnement d'Ethernet et le rôle des protocoles des couches physique et liaison de données",
+                        "Configurer des routeurs pour assurer la connectivité de bout en bout entre des périphériques distants",
+                        "Créer et vérifier la connectivité des systèmes d'adressage IPv4 et IPv6",
+                        "Expliquer comment les couches supérieures du modèle OSI prennent en charge les applications réseau",
+                        "Configurer un petit réseau en appliquant les meilleures pratiques de sécurité réseau",
+                        "Dépanner la connectivité dans un petit réseau local",
+                        "Configurer du matériel Cisco avec les protocoles de routage RIP/RIPv2 et OSPFv2",
+                        "Comprendre les différences entre les protocoles de routage à vecteur de distance et à état de liens, ainsi que le fonctionnement de leurs algorithmes (Bellman Ford, SPF)",
+                        "Configurer HSRP pour la redondance et l'équilibrage de charge entre les routeurs",
+                        "Simuler le réseau d'une petite entreprise sur Cisco Packet Tracer",
+                        "Appliquer le NAT Masquerading (overload) et les règles d'ACL, ainsi que le PAT pour le fonctionnement d'une DMZ",
+                        "Configurer le port forwarding pour l'accès externe à la DMZ",
+                        "Configurer l'accès distant en SSH",
+                        "Mettre en place un serveur DHCP configuré sur un routeur",
+                        "Configurer du matériel Cisco (switch et routeur) pour la communication entre plusieurs machines",
+                        "Découvrir et mettre en œuvre les notions de VLAN et de redondance",
+                        "Sécuriser des équipements actifs",
+                        "Étudier et analyser les caractéristiques et le fonctionnement d'un réseau domestique",
+                        "Comprendre les notions d'IP privé et public, de NAT, d'AS et le fonctionnement d'une box internet",
+                        "Savoir utiliser Wireshark et identifier les différents protocoles d'un réseau local",
+                        "Connaissances de base sur la commutation, le routage et le wifi",
+                        "Configurer les VLAN et le routage inter-VLAN en appliquant les meilleures pratiques de sécurité",
+                        "Dépanner le routage inter-VLAN sur des périphériques de couche 3",
+                        "Configurer la redondance sur un réseau commuté à l'aide de STP et d'Etherchannel",
+                        "Dépanner Etherchannel sur un réseau commuté",
+                        "Configurer l'allocation dynamique d'adresse IPv6",
+                        "Configurer les WLAN en utilisant un WLC et les meilleures pratiques de sécurité de couche 2",
+                        "Configurer la sécurité des commutateurs pour atténuer les attaques du réseau local",
+                        "Configurer le routage statique IPv4 et IPv6 sur un routeur"
+                    ],
+                    Projets: [
+                        "Concevoir un outil d'audit de sécurité automatisé pour application web en définissant le périmètre, les outils open source (licence non contaminantes, white hat) et un système de scoring de vulnérabilité",
+                        "Mener une analyse approfondie des besoins clients et une étude des solutions techniques pour la conception d'outils",
+                        "Concevoir des maquettes d'interface utilisateur pour des outils d'audit de sécurité, incluant l'interface et la page de résultats",
+                        "Rédiger un rapport de pentest complet et compréhensible, détaillant les CVE, leurs conséquences et les solutions de remédiation",
+                        "Fournir les documents légaux et contractuels (conditions générales de services, devis) nécessaires pour un pentest",
+                        "Mettre en pratique les compétences en programmation orientée objet (Java) pour le développement d'applications Android",
+                        "Créer des applications Android avec des fonctionnalités de partage d'images et de gifs",
+                        "Développer une interface graphique interactive en Java sur Android Studio",
+                        "Concevoir un serveur Java communiquant avec une application mobile via PHP",
+                        "Intégrer et utiliser une API dans une application mobile",
+                        "Concevoir un réseau d'entreprise multisites sécurisé sur des équipements Cisco réels",
+                        "Mettre en œuvre des connexions IPSec entre deux sites",
+                        "Configurer une connexion VPN-SSL nomade",
+                        "Mettre en œuvre une redondance de niveau 2 avec équilibrage de charge (HSRP, STP, VLAN) et optimisation des flux",
+                        "Mettre en œuvre une redondance de niveau 3 sur le cœur de réseau avec du routage dynamique OSPF",
+                        "Effectuer un découpage pertinent en sous-réseaux VLAN",
+                        "Identifier et configurer les besoins en services réseaux (notamment DHCP)",
+                        "Mettre en œuvre une sécurité d'accès aux sites, aux équipements et entre les départements (IPSec)",
+                        "Injecter rapidement des configurations sauvegardées sur des équipements réseau",
+                        "Appréhender des matériels réseau réels hétérogènes (hardware et IOS)",
+                        "Interpréter les différents types de messages lors des configurations réseau",
+                        "S'adapter et rechercher une alternative aux problèmes techniques",
+                        "Être à l'écoute et force de proposition au sein d'une équipe de projet",
+                        "Diriger un projet en équipe, de la définition des besoins à la réalisation du produit final",
+                        "Mettre en œuvre les techniques de gestion de projet (diagramme de Gantt, RACI, analyse des risques) pour respecter les délais et les besoins du client",
+                        "Développer des compétences en travail d'équipe, organisation et gestion de planning (y compris les imprévus)",
+                        "Développer des compétences en programmation web, notamment CSS et PHP",
+                        "Réaliser et configurer une infrastructure réseau sous Packet Tracer pour une petite entreprise",
+                        "Implémenter des sous-réseaux VLAN pour le réseau interne d'une entreprise",
+                        "Configurer des serveurs DHCP et DNS (résolver interne) sur un réseau d'entreprise",
+                        "Relier l'infrastructure réseau à un MLS (Multi Layer Switch)",
+                        "Mettre en place une DMZ avec un serveur web et un serveur DNS (résolver externe)",
+                        "Configurer le NAT Masquerading pour les hôtes internes et le Port Forwarding pour les serveurs en DMZ",
+                        "Utiliser un pare-feu Cisco 5505 pour contrôler et sécuriser les flux entrants dans un réseau d'entreprise",
+                        "Connaissances de base d'un réseau d'entreprise et les bonnes pratiques essentielles à sa mise en place, notamment en matière de sécurité"
+                    ],
+                    Langues: [
+                        "Créer un CV vidéo en anglais présentant un parcours et des objectifs professionnels",
+                        "Adapter une présentation de CV aux attentes spécifiques du marché du travail anglophone",
+                        "Capacité à rechercher des opportunités professionnelles à l'international",
+                        "Écrire un script et monter une vidéo en anglais",
+                        "Connaissances du vocabulaire technique lié aux composants informatiques en anglais",
+                        "Développer les compétences en expression orale et écrite en anglais via la création de contenu vidéo"
+                    ],
+                    Communication: [
+                        "Savoir appliquer les règles essentielles du français écrit",
+                        "Rédiger un texte en adoptant un thème spécifique pour rendre les informations ludiques et amusantes",
+                        "Collaborer en équipe pour la création de contenu",
+                        "Adapter le style et le ton d'un document à un public cible"
+                    ],
+                };
+
+                // Fonction pour afficher les compétences d'un domaine donné
+                function displaySkills(domain) {
+                    skillList.innerHTML = ''; // Vide la liste actuelle des compétences
+
+                    const skills = skillsData[domain];
+                    if (skills) {
+                        skills.forEach(skill => {
+                        const li = document.createElement('li');
+                        li.textContent = skill;
+                        skillList.appendChild(li);
+                        });
+                    } else {
+                        const li = document.createElement('li');
+                        li.textContent = "Aucune compétence pour ce domaine.";
+                        skillList.appendChild(li);
+                    }
+                }
+
+                // Gérer les clics sur les domaines
+                domainList.addEventListener('click', (event) => {
+                    const clickedElement = event.target;
+
+                    // Vérifie si l'élément cliqué est bien un 'li' dans la liste des domaines
+                    if (clickedElement.tagName === 'DIV') {
+                        // Retire la classe 'active' de l'élément actuellement actif
+                        const currentActive = domainList.querySelector('div.active');
+                        if (currentActive) {
+                            currentActive.classList.remove('active');
+                        }
+
+                        // Ajoute la classe 'active' à l'élément cliqué
+                        clickedElement.classList.add('active');
+
+                        // Récupère le domaine via l'attribut data-domain
+                        const selectedDomain = clickedElement.dataset.domain;
+                        displaySkills(selectedDomain); // Affiche les compétences correspondantes
+                    }
+                });
+
+                // Afficher les compétences du premier domaine par défaut au chargement de la page
+                const initialDomain = domainList.querySelector('div.active').dataset.domain;
+                displaySkills(initialDomain);
+            });
+        </script>
     </body>
 </html>
