@@ -165,7 +165,7 @@
                     </div>
                 </div>
                 <div class="presentation4">
-                    <p class="p1">Je suis en contrat d'alternance pour une durée de 2 ans en tant que technicien
+                    <p class="p1">Je suis en contrat d'alternance (2 ans) jusqu'à août 2026 en tant que technicien
                                 informatique au Centre de Traitement Informatique (CTI) de Sophia Antipolis.
                     </p>
                     <div class="logo">
@@ -976,6 +976,14 @@
                     </div>
 
                </div>
+               <button id="togglePresentationButton" class="presentation_toggle_btn">Masquer la Présentation</button>
+            </div>
+            <div class="welcome_overlay" id="welcomeOverlay">
+                <div class="overlay_content">
+                    <h2>Bienvenue sur ma page de Compétences !</h2>
+                    <p>Découvrez ici un aperçu détaillé de mes aptitudes et de mon savoir-faire. J'ai regroupé mes compétences par domaines pour vous offrir une navigation claire et ciblée.</p>
+                    <p>Explorez les différentes catégories pour voir les compétences spécifiques que j'ai acquises et mises en pratique à travers mes projets et mon parcours.</p>
+                </div>
             </div>
             <div class="right_arrow"></div>
             <div class="corner3"></div>
@@ -1369,6 +1377,33 @@
                 // Afficher les compétences du premier domaine par défaut au chargement de la page
                 const initialDomain = domainList.querySelector('div.active').dataset.domain;
                 displaySkills(initialDomain);
+            });
+
+
+
+            const welcomeOverlay = document.getElementById('welcomeOverlay');
+            const togglePresentationButton = document.getElementById('togglePresentationButton'); // Renommé pour clarté
+
+            // Fonction pour masquer/afficher l'overlay avec animation
+            togglePresentationButton.addEventListener('click', () => {
+                if (welcomeOverlay.classList.contains('hidden')) {
+                    // Si l'overlay est caché, on le réaffiche
+                    welcomeOverlay.classList.remove('hidden');
+                    togglePresentationButton.textContent = 'Masquer la Présentation';
+                } else {
+                    // Si l'overlay est visible, on le masque
+                    welcomeOverlay.classList.add('hidden');
+                    togglePresentationButton.textContent = 'Info';
+                }
+            });
+
+            // Au chargement de la page, assure-toi que l'overlay est visible par défaut
+            // et que le texte du bouton est correct
+            document.addEventListener('DOMContentLoaded', () => {
+                // ... (ton code existant pour le chargement des compétences) ...
+
+                welcomeOverlay.classList.remove('hidden'); // S'assurer qu'il est visible au début
+                togglePresentationButton.textContent = 'Masquer la Présentation'; // Texte initial du bouton
             });
         </script>
     </body>

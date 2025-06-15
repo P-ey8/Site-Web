@@ -254,6 +254,7 @@ width / height*/
 }
 
 #skills {
+    position: relative; /* Nécessaire pour le positionnement absolu de l'overlay */
     background-color: var(--background);
     grid-column: 4;
     grid-row: 2;
@@ -1141,6 +1142,73 @@ nav {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
+.welcome_overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 200px);
+    max-width: 800px;
+    height: auto;
+    background-color: var(--title3);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.welcome_overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.overlay_content h2 {
+    color: var(--active);
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.overlay_content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.presentation_toggle_btn {
+    position: absolute; /* Positionne le bouton par rapport à .principale */
+    top: 35px; /* Distance du haut du conteneur .principale */
+    right: 20px; /* Distance de la droite du conteneur .principale */
+    background-color: var(--active); /* Couleur de fond du bouton */
+    color: var(--title3); /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 18px;
+    font-size: 0.95em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1001; /* Assure que le bouton est au-dessus de l'overlay */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.presentation_toggle_btn:hover {
+    background-color: var(--transition_black);
+    color: var(--title1);
+    transform: translateY(-2px);
+}
+
+
+
+
 
 
 
